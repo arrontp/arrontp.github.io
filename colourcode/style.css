@@ -139,7 +139,7 @@ input{
     font-size: 1.5rem;
 }
 
-.close > a, :hover, :visited, :active{
+.close > a, .close > a:hover, .close > a:visited, .close > a:active{
     text-decoration: none;
     color: #525252;
 }
