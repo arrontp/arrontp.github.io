@@ -1,0 +1,23 @@
+{
+    "colour": [
+ 
+       {
+          "name": "red",
+          "hex": "#FF0000",
+          "theory": "redfact"
+       },
+       {
+          "name": "green",
+          "hex": "#00FF00",
+          "theory": "greenfact"
+        },
+        {
+          "name": "blue",
+          "hex": "#0000FF",
+          "theory": "bluefact"
+        }
+    
+    ]
+ }
+
+ 

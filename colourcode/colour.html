@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Colour Code</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+    <body id="body">
+        <header>
+            <h1>Colour Code</h1>
+           <div>
+            <button type="button" id="restart">Reset</button>
+            <h2><a id="getHint" onClick="hint()">?</a></h2>
+        </div>
+        </header>
+        <main id="main">
+            <section>
+                <form autocomplete="off">
+                    <label for="fInput" class="hide" aria-label="type colour">Enter Colour Name</label>
+                    <input type="text" id="fInput" name="fInput" placeholder="Type a Colour..." autocomplete="off" pattern="[a-z0-9#]" title="Please only use lowercase letters, numbers and '#' in your search." />
+                </form>
+            </section>
+            <section id="output">
+                    <ul id="details">
+                        <li id="colourName"></li>
+                        <li id="colourHex"></li>
+                        <!-- <li id="colourTheory"></li> -->
+                    </ul>
+            </section>
+            <div id="hint">
+                <div class="close">
+                    <a class="closeBtn" onClick="hideHint()">X</a>
+                </div>
+                <div>
+               <iframe src="htmlcolours2020.txt" title="HTML Colours List"></iframe> 
+                </div>
+            </div>
+        </main>
+        <script src="colour_gen.js"></script>
+    </body>
+</html>

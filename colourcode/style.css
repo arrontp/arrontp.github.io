@@ -1,0 +1,196 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #F0F0F0;
+}
+
+p{  font-size: 10px;
+
+}
+
+header{
+    padding: 1rem 2rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header > div{
+    display: flex;
+}
+
+button, button:visited, button:active{
+    border: 1px solid black;
+    padding: 0px 10px;
+    background-color: #fff;
+    margin: 0px 1rem;
+}
+
+button:hover{
+    text-decoration: underline;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+    cursor: pointer;
+}
+
+header > div > h2{
+    align-self: center;
+}
+header > div > h2 > a, header > div > h2 > a:hover, header > div > h2 > a:visited, header > div > h2 > a:active{
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(5 ,1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: ". input input input ."
+                        ". output output output ."
+                        ". . . . .";
+    gap: 50px 5px;
+    justify-content: center;   
+    z-index: 0; 
+}
+
+section:first-child{
+    text-align: center;
+    grid-area: "input";
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+}
+
+.hide{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+input{
+    width: 100%;
+    height: 5rem;
+    border: 0px;
+    outline: none;
+    box-shadow: 0px 3px #888;
+    padding:5px 2px 5px 6px;
+    font-size: 4rem;
+    text-align: center;
+    background-color: #fff0;
+    text-transform: capitalize;
+}
+
+#output{
+    display: none;
+    background-color: #0000000f;
+    border: #0000001f;
+    padding: 10px;
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
+    animation: move 1s ease;
+    transform: translateY(1rem);
+}
+
+#details{
+    list-style: none;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2rem;
+    background: white;
+    padding: .4rem;
+}
+
+#colourHex{
+    text-transform: uppercase;
+}
+
+#hint{
+
+    display: none;
+    background: white;
+    z-index: 1;
+    grid-column: 2 / 5;
+    grid-row: 1 / 4;
+    padding: 1rem;
+    
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+     -ms-animation: fadein 1s; /* Internet Explorer */
+     -o-animation: fadein 1s; /* Opera < 12.1 */
+     animation: fadein 1s;
+}
+
+.close{
+    display: block;
+    float: right;
+    font-size: 1.5rem;
+}
+
+.close > a, :hover, :visited, :active{
+    text-decoration: none;
+    color: #525252;
+}
+
+iframe{
+    margin: 0 auto;
+    height: 25rem;
+    width: 50%;
+    border: none;
+}
+
+#hint div:nth-child(2){
+    display: flex;
+}
+
+
+@keyframes move {
+  
+    0% {
+          transform: translateY(0rem); 
+          opacity: 0;   
+        }
+        100% {
+          transform: translateY(1rem);
+          opacity: 1;
+        }
+      }
+
+@keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+from { opacity: 0; }
