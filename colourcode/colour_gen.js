@@ -1,10 +1,3 @@
-// To Do:
-// HTML Validation Message on capitals.
-// Hint Button
-// Add icon to Reset
-// Colour Theroy
-// Contrast
-
 var textRequest = new XMLHttpRequest();
 textRequest.open("GET", "htmlcolours2020.txt", true);
 textRequest.send(null);
@@ -57,17 +50,9 @@ function colourCount(colours, coloursCapz){
 
 
 function hint(){
-  const getHint = document.getElementById("hint");
-  getHint.style.display="block";
-  // const closeBtn = document.getElementsByClassName("closeBtn");
-  // // closeBtn.style.cursor="pointer";
-  // console.log(closeBtn);
-
-
-document.querySelector(".closeBtn").style.cursor="pointer"; 
-
+  document.getElementById("hint").style.display="block";
+  document.querySelector(".closeBtn").style.cursor="pointer"; 
 }
 function hideHint(){
-  const getHint = document.getElementById("hint");
-  getHint.style.display="none";
+  document.getElementById("hint").style.display="none";
 }
